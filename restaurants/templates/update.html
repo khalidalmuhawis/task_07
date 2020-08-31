@@ -5,6 +5,12 @@
         <title>Update</title>
     </head>
     <body>
+      <form action="{% url 'restaurant-delete' restaurant_id=restaurant.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="" value="save">
+
+      </form>
 
     </body>
 </html>
